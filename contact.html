@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Eleven Enterprise</title>
+    <meta name="description" content="Get in touch with Eleven Enterprise, the premier fashion house. Reach out for collaborations, custom designs, or inquiries about our collections." />
+    <meta name="author" content="Eleven Enterprise">
+    <link href="style.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpK1sWi3J3EbUOkF_K4-UHzi285HyFX5M&sensor=false"></script>
+</head>
+<body class="hidden hidden-ball smooth-scroll uppercase-titles" data-primary-color="#8c6144">
+
+	<main>		
+        <!-- Preloader -->
+        <div class="preloader-wrap" data-centerLine="Loading">
+            <div class="outer">
+                <div class="inner">                    
+                    <div class="trackbar">
+                    	<div class="preloader-intro">
+                        	<span>Loading</span>
+                        </div>
+                        <div class="loadbar"></div>
+                        <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
+                    </div>
+                    
+                    <div class="percentage-intro">Please wait, content is loading</div>                     
+                </div>
+            </div>
+        </div>
+        <!--/Preloader -->     
+        
+        <div class="cd-index cd-main-content">
+    
+        <!-- Page Content -->
+        <div id="page-content" class="light-content" data-bgcolor="#0c0c0c">
+            
+            <!-- Header -->
+            <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
+                <div id="header-container">
+                
+                
+                <!-- Logo -->
+                <div id="logo" class="hide-ball">
+                    <a class="ajax-link" data-type="page-transition" href="index.html">
+                        <img class="black-logo" src="images/logo.png" alt="Eleven Enterprise Logo">
+                        <img class="white-logo" src="images/logo-white.png" alt="Eleven Enterprise Logo">
+                    </a>
+                </div>
+                <!--/Logo -->
+                            
+                
+                <!-- Navigation -->
+                <nav> 
+                	<div class="nav-height">
+                        <div class="outer">
+                            <div class="inner">           
+                                <ul data-breakpoint="10025" class="flexnav">
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="index.html"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="Collections">Collections</span></div></a>
+                                        <ul>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Summer Collection</a></li>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Winter Collection</a></li>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Bridal Collection</a></li>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Casual Wear</a></li>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Formal Wear</a></li> 
+                                        </ul>
+                                    </li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="About">About</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="More">More</span></div></a>
+                                        <ul>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Lookbook</a></li>                                         
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Fashion Shows</a></li>
+                                            <li><a class="ajax-link" href="#" data-type="page-transition">Style Guide</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="link menu-timeline"><a class="buy-template" target="_blank" href="#"><div class="before-span"><span data-hover="Shop Now">Shop Now</span></div></a></li>
+                                </ul>            
+                            </div>
+                        </div> 
+                    </div>          
+                </nav>
+                <!--/Navigation -->
+                
+                
+                <!-- Menu Burger -->
+                <div class="button-wrap right menu burger-lines">
+                    <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                            <div id="burger-wrapper">
+                                <div id="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div> 
+                </div>
+                <!--/Menu Burger -->
+            
+                </div>
+            </header>
+            <!--/Header -->
+            
+            
+            
+            <!-- Content Scroll -->
+            <div id="content-scroll">
+            
+            
+                <!-- Main -->
+                <div id="main">
+                
+                    <!-- Hero Section -->
+                    <div id="hero">
+                        <div id="hero-styles">
+                            <div id="hero-caption" class="content-full-width no-padding-bottom text-align-center subtitle-padding-left">
+                                <div class="inner">                                    
+                                    <h1 class="hero-title caption-timeline"><span><em>Get In</em></span> <span>Touch</span></h1>
+                                    <div class="hero-subtitle caption-timeline"><span>We'd love to hear</span> <span>from you</span> <span>and discuss your vision</span></div>  
+                                </div>
+                            </div>                                  
+                        </div>
+                    </div>                      
+                    <!--/Hero Section -->   
+                         
+                    
+                    <!-- Main Content -->
+                    <div id="main-content">
+                        <!-- Main Page Content -->
+                        <div id="main-page-content" class="content-full-width">
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row dark-section" data-bgcolor="#0c0c0c">
+                                
+                                <div class="one_half">
+                                    <h2 class="has-mask-fill">Let's Create Something <em>Extraordinary</em> Together</h2>
+                                    <p class="has-opacity bigger">Reach out to us for custom designs, collaborations, or any inquiries about our collections. Our team is ready to bring your fashion vision to life.</p>
+                                    
+                                    <div class="button-wrap right button-link large-btn has-animation">
+                                        <div class="icon-wrap parallax-wrap">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="button-text sticky right">
+                                            <span data-hover="Start a Conversation">Start a Conversation</span>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div class="one_half last">
+                                    <div class="clipped-image-wrapper">
+                                        <div class="clipped-image-pin">                                      
+                                            <div class="clipped-image">
+                                                <img src="images/about.jpg" alt="Contact Eleven Enterprise">
+                                                <div class="clipped-image-gradient"></div>
+                                            </div>
+                                        </div>
+                                        <div class="clipped-image-content"></div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row dark-section" data-bgcolor="#0c0c0c">
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Reach Out</p>
+                                </div>
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Connect With Us</p>
+                                </div>
+                                
+                                <div class="one_half last">                                    
+                                    <p class="has-opacity bigger">We're here to assist you with any questions or collaborations. Our team responds promptly to all inquiries.</p>
+                                </div>
+                                
+                                <hr class="destroy">
+                                
+                                <div class="one_half">
+                                    <div class="contact-info-card">
+                                        <h3><em>General</em> Inquiries</h3>
+                                        <hr class="animated-line has-animation">
+                                        <p>For general questions about our collections, availability, or brand partnerships.</p>
+                                        <p><a href="mailto:info@elevenenterprise.com" class="link">info@elevenenterprise.com</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="one_half last">
+                                    <div class="contact-info-card">
+                                        <h3><em>Custom</em> Design</h3>
+                                        <hr class="animated-line has-animation">
+                                        <p>For bespoke fashion pieces and personalized styling services.</p>
+                                        <p><a href="mailto:design@elevenenterprise.com" class="link">design@elevenenterprise.com</a></p>
+                                    </div>
+                                    
+                                    <div class="contact-info-card">
+                                        <h3><em>Press</em> & Media</h3>
+                                        <hr class="animated-line has-animation">
+                                        <p>For media inquiries, collaborations, and press kit requests.</p>
+                                        <p><a href="mailto:press@elevenenterprise.com" class="link">press@elevenenterprise.com</a></p>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row full row_padding_top row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Visit Our Atelier</p>
+                                </div>
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Showroom Locations</p>
+                                </div>
+                                
+                                <div class="one_half last">                                    
+                                    <p class="has-opacity bigger">Experience our collections firsthand at one of our flagship locations.</p>
+                                </div>
+                                
+                                <hr class="destroy">
+                                
+                                <div class="one_full">
+                                    <div class="one_third">
+                                        <div class="location-card">
+                                            <h4><em>New York</em> Flagship</h4>
+                                            <p>580 Fifth Avenue<br>
+                                            New York, NY 10036<br>
+                                            United States</p>
+                                            <p>Mon-Sat: 10am-8pm<br>
+                                            Sun: 12pm-6pm</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="one_third">
+                                        <div class="location-card">
+                                            <h4><em>Paris</em> Boutique</h4>
+                                            <p>32 Avenue Montaigne<br>
+                                            75008 Paris<br>
+                                            France</p>
+                                            <p>Mon-Sat: 10am-8pm<br>
+                                            Sun: 12pm-6pm</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="one_third last">
+                                        <div class="location-card">
+                                            <h4><em>Milan</em> Showroom</h4>
+                                            <p>Via Monte Napoleone, 9<br>
+                                            20121 Milan<br>
+                                            Italy</p>
+                                            <p>Mon-Sat: 10am-8pm<br>
+                                            Sun: 12pm-6pm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row full row_padding_top row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Follow Our Journey</p>
+                                </div>
+                                
+                                <div class="one_fourth">
+                                    <p class="has-mask-fill no-margins">Social Presence</p>
+                                </div>
+                                
+                                <div class="one_half last">                                    
+                                    <p class="has-opacity bigger">Stay connected with our latest collections, behind-the-scenes content, and fashion insights.</p>
+                                </div>
+                                
+                                <hr class="destroy">
+                                
+                                <div class="socials-wrapper">
+                                    <ul class="socials-list">
+                                        <li class="link">
+                                            <a href="https://www.instagram.com/elevenenterprise" target="_blank">
+                                                <i class="fa-brands fa-instagram"></i>
+                                                <span>Instagram</span>
+                                            </a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="https://www.pinterest.com/elevenenterprise" target="_blank">
+                                                <i class="fa-brands fa-pinterest"></i>
+                                                <span>Pinterest</span>
+                                            </a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="https://www.twitter.com/elevenenterprise" target="_blank">
+                                                <i class="fa-brands fa-twitter"></i>
+                                                <span>Twitter</span>
+                                            </a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="https://www.facebook.com/elevenenterprise" target="_blank">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <span>Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="https://www.tiktok.com/@elevenenterprise" target="_blank">
+                                                <i class="fa-brands fa-tiktok"></i>
+                                                <span>TikTok</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                        
+                        </div>
+                        <!--/Main Page Content -->
+                        
+                        
+                        <!-- Page Navigation --> 
+                        <div id="page-nav">
+                            <div class="page-nav-wrap">
+                                <div class="page-nav-caption content-full-width text-align-center">                                 
+                                    <div class="inner">
+                                        <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="HOME" href="index.html">
+                                            <div class="next-hero-title primary-font-title caption-timeline"><span><em>Return</em></span> <span>to Homepage</span></div>
+                                        </a>
+                                        <div class="next-hero-subtitle caption-timeline"><span>Continue exploring our world of fashion</span></div>
+                                    </div>               
+                                </div>
+                            </div>
+                        </div>      
+                        <!--/Page Navigation -->
+                        
+                                
+                    </div>
+                    <!--/Main Content --> 
+                
+                </div>
+                <!--/Main -->
+                
+                <!-- Footer -->
+                <footer class="hidden">    	
+                    <div id="footer-container">
+                        
+                        <div id="backtotop" class="button-wrap left">
+                            <div class="icon-wrap parallax-wrap">
+                                <div class="button-icon parallax-element">
+                                    <i class="fa-solid fa-angle-up"></i>
+                                </div>
+                            </div>
+                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                        </div>
+                        
+                        <div class="footer-middle">
+                            <div class="copyright">2025 © <a class="link" target="_blank" href="https://elevenenterprise.com/">Eleven Enterprise</a>. All rights reserved.</div>
+                        </div>
+                        
+                        <div class="socials-wrap">            	
+                            <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                            <div class="socials-text">Follow Us</div>
+                            <ul class="socials">
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/elevenenterprise" target="_blank">In</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.pinterest.com/elevenenterprise" target="_blank">Pi</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/elevenenterprise" target="_blank">Tw</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/elevenenterprise" target="_blank">Fb</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.tiktok.com/@elevenenterprise" target="_blank">Tt</a></span></li>
+                            </ul>                
+                        </div>
+                        
+                    </div>
+                </footer>
+                <!--/Footer -->
+            
+        
+        	</div>
+            <!--/Content Scroll -->
+            
+            
+            <div id="app"></div>
+            
+            
+		</div>    
+        <!--/Page Content -->
+    
+		</div>
+	</main>
+    
+    
+    
+    
+    <div class="cd-cover-layer"></div>
+    <div id="magic-cursor">
+        <div id="ball">
+        	<div id="ball-drag-x"></div>
+            <div id="ball-drag-y"></div>
+        	<div id="ball-loader"></div>
+        </div>
+    </div>
+    <div id="clone-image">
+    	<div class="hero-translate"></div>
+    </div>
+    <div id="rotate-device"></div>
+    
+    
+		
+    <script src="js/plugins.js"></script>
+    <script src="js/clapat.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
