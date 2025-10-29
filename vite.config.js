@@ -6,12 +6,14 @@ export default defineConfig({
   plugins: [react()],
   root: './',
   base: './',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html')
       },
     },
   },
