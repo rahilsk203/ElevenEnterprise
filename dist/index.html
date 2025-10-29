@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manifesto - Creative Portfolio Template</title>
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    
+    <!-- External Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpK1sWi3J3EbUOkF_K4-UHzi285HyFX5M&sensor=false"></script>
+  <script type="module" crossorigin src="./assets/main-39089e93.js"></script>
+  <link rel="stylesheet" href="./assets/index-30a41621.css">
+</head>
+
+
+<body class="hidden hidden-ball smooth-scroll uppercase-titles" data-primary-color="#8c6144">
+
+	
+	<main>		
+        <!-- Preloader -->
+        <div class="preloader-wrap" data-centerLine="Loading">
+            <div class="outer">
+                <div class="inner">                    
+                    <div class="trackbar">
+                    	<div class="preloader-intro">
+                        	<span>Loading</span>
+                        </div>
+                        <div class="loadbar"></div>
+                        <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
+                    </div>
+                    
+                    <div class="percentage-intro">Please wait, content is loading</div>                     
+                </div>
+            </div>
+        </div>
+        <!--/Preloader -->     
+        
+        <div class="cd-index cd-main-content">
+    
+        <!-- Page Content -->
+        <div id="page-content" class="light-content" data-bgcolor="#0c0c0c">
+            
+            <!-- Header -->
+            <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
+                <div id="header-container">
+                
+                
+                <!-- Logo -->
+                <div id="logo" class="hide-ball">
+                    <a class="ajax-link" data-type="page-transition" href="index.html">
+                        <img class="black-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAB4CAYAAADvwey3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA21pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozYzM1YWY2Ny1mZGNlLTgxNDEtYTk4Yy1hZDA3YjM3MzhhNjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkE4QjE3REZFNjk5MTFFRDgzMUQ5MjlBRjAxQjY4QjAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkE4QjE3REVFNjk5MTFFRDgzMUQ5MjlBRjAxQjY4QjAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmFlNzViYjFmLTYxY2YtYTI0Yy04NWQ3LWRmNjFmN2E5MTU1NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxODgxMEVDNjdDQjIxMUVEOEM4Njg0NkU2NDlBOEU5MyIvPiA8L3JkZjpE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" alt="ClaPat Logo">
+                        <img class="white-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAB4CAYAAADvwey3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA21pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozYzM1YWY2Ny1mZGNlLTgxNDEtYTk4Yy1hZDA3YjM3MzhhNjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDlBM0RBNDRFNjk5MTFFRDlDNTA4QjI1NjgzRjdGNTEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDlBM0RBNDNFNjk5MTFFRDlDNTA4QjI1NjgzRjdGNTEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmFlNzViYjFmLTYxY2YtYTI0Yy04NWQ3LWRmNjFmN2E5MTU1NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxODgxMEVDNjdDQjIxMUVEOEM4Njg0NkU2NDlBOEU5MyIvPiA8L3JkZjpE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" alt="ClaPat Logo">
+                    </a>
+                </div>
+                <!--/Logo -->
+                            
+                
+                <!-- Navigation -->
+                <nav> 
+                	<div class="nav-height">
+                        <div class="outer">
+                            <div class="inner">           
+                                <ul data-breakpoint="10025" class="flexnav">
+                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="index.html"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="Portfolio">Portfolio</span></div></a>
+                                        <ul>
+                                            <li><a class="ajax-link" href="index-showcase-carousel.html" data-type="page-transition">Showcase Carousel</a></li>
+                                            <li><a class="ajax-link" href="index-showcase-grid.html" data-type="page-transition">Portfolio Grid</a></li>
+                                            <li><a class="ajax-link" href="index-showcase-slider.html" data-type="page-transition">Fullscreen Slider</a></li>
+                                            <li><a class="ajax-link" href="index-showcase-list.html" data-type="page-transition">Infinity List</a></li>
+                                            <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
+                                        </ul>
+                                    </li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="About">About</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="More">More</span></div></a>
+                                        <ul>
+                                            <li><a class="ajax-link" href="typography.html" data-type="page-transition">Typography</a></li>                                         
+                                            <li><a class="ajax-link" href="multimedia.html" data-type="page-transition">Multimedia</a></li>
+                                            <li><a class="ajax-link" href="shortcodes.html" data-type="page-transition">Shortcodes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="link menu-timeline"><a class="buy-template" target="_blank" href="https://themeforest.net/item/manifesto-creative-portfolio-theme/48149521"><div class="before-span"><span data-hover="Buy Now">Buy Now</span></div></a></li>
+                                </ul>            
+                            </div>
+                        </div> 
+                    </div>          
+                </nav>
+                <!--/Navigation -->
+                
+                
+                <!-- Menu Burger -->
+                <div class="button-wrap right menu burger-lines">
+                    <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                            <div id="burger-wrapper">
+                                <div id="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div> 
+                </div>
+                <!--/Menu Burger -->
+            
+                </div>
+            </header>
+            <!--/Header -->
+            
+            
+            
+            <!-- Content Scroll -->
+            <div id="content-scroll">
+            
+            
+                <!-- Main -->
+                <div id="main">
+                
+                    <!-- Hero Section -->
+                    <div id="hero">
+                        <div id="hero-styles">
+                            <div id="hero-caption" class="content-full-width no-padding-bottom text-align-center subtitle-padding-left">
+                                <div class="inner">                                    
+                                    <h1 class="hero-title caption-timeline"><span><em>The Manifesto</em></span> <span>Portfolio Website</span></h1>
+                                    <div class="hero-subtitle caption-timeline"><span>Experience the</span> <span>perfect blend of creativity</span> <span>and functionality</span></div>  
+                                </div>
+                            </div>                                  
+                        </div>
+                    </div>                      
+                    <!--/Hero Section -->   
+                         
+                    
+                    <!-- Main Content -->
+                    <div id="main-content">
+                        <!-- Main Page Content -->
+                        <div id="main-page-content" class="content-full-width">
+                            
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row dark-section fadeout-element" data-bgcolor="#0c0c0c">
+                            
+                            	<div class="clipped-image-wrapper">
+                                
+                                	<div class="clipped-image-pin">                                    	
+                                        <div class="clipped-image">
+                                            <img src="./assets/00hero-4801a247.jpg" alt="Image Title">
+                                            <div class="clipped-image-gradient"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="clipped-image-content text-align-center content-full-width">
+                                		<h2 class="has-mask-fill">Stand out from the crowd and make a statement with our sleek and stylish portfolio template that speaks volumes about your creativity.</h2>
+                                        <hr>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                                
+                                <div class="one_fourth">
+                                	<p class="has-mask-fill no-margins">2023</p>
+                                </div>
+                                
+                                <div class="one_fourth">
+                                	<p class="has-mask-fill no-margins">Portfolio Website</p>
+                                </div>
+                                
+                                <div class="one_half last">
+                                	<p class="has-opacity bigger">Our template pages are a playground for creativity, where we leverage an assortment of shortcodes to build captivating content. This enables us to demonstrate the limitless potential and showcase the impressive features of our template.</p>
+                                    
+                                    
+                                    
+                                    <div class="button-wrap right button-link large-btn has-animation">
+                                        <div class="icon-wrap parallax-wrap">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                        <a target="_blank" href="https://themeforest.net/user/clapat/portfolio"><div class="button-text sticky right">
+                                        	<span data-hover="Learn More">Learn More</span></div>
+                                        </a> 
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row full row_padding_top row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
+                            
+                                <!-- Showcase Portfolio Holder -->                                                          
+                                <div id="itemsWrapperLinks">                               
+                                    <div id="itemsWrapper" class="webgl-fitthumbs fx-one">
+                                    
+                                        <!-- ClaPat Portfolio -->
+                                        <div class="showcase-portfolio layout-one">
+                                            
+                                            <div class="clapat-item photo-filter" data-startparallax="-0.2" data-endparallax="0.2">
+                                                <div class="slide-inner trigger-item" data-centerLine="OPEN">                                                    
+                                                    <div class="img-mask">
+                                                        <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                        <div class="section-image trigger-item-link">
+                                                            <img src="./assets/01hero-76ea6809.jpg" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="./assets/01hero-76ea6809.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                    </div>
+                                                    <div class="slide-caption trigger-item-link-secondary">
+                                                        <div class="slide-title"><span><em>The</em> Handbag</span></div>                                                    
+                                                        <div class="slide-date"><span>2023</span></div>
+                                                        <div class="slide-cat"><span>Photography</span></div>
+                                                        <div class="slide-icon"><i class="arrow-icon-down"></i></div>                                             
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="clapat-item design-filter" data-startparallax="-0.2" data-endparallax="0.2">
+                                                <div class="slide-inner trigger-item" data-centerLine="OPEN">                                                    
+                                                    <div class="img-mask">
+                                                        <a class="slide-link" data-type="page-transition" href="project02.html"></a>
+                                                        <div class="section-image  trigger-item-link">
+                                                            <img src="./assets/02hero-fc7d75d3.jpg" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="./assets/02hero-fc7d75d3.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                    </div>
+                                                    <div class="slide-caption trigger-item-link-secondary">
+                                                        <div class="slide-title"><span><em>Woolen</em> Craft</span></div>
+                                                        <div class="slide-date"><span>2023</span></div>
+                                                        <div class="slide-cat"><span>Product Design</span></div>                                                    
+                                                        <div class="slide-icon"><i class="arrow-icon-down"></i></div>                                           
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="clapat-item photo-filter" data-startparallax="-0.2" data-endparallax="0.2">                                                
+                                                <div class="slide-inner trigger-item" data-centerLine="OPEN">                                                    
+                                                    <div class="img-mask">
+                                                        <a class="slide-link" data-type="page-transition" href="project03.html"></a>
+                                                        <div class="section-image trigger-item-link">
+                                                            <img src="./assets/03hero-8f76b724.jpg" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="./assets/03hero-8f76b724.jpg" class="grid__item-img grid__item-img--large" alt="">                              
+                                                    </div>
+                                                    <div class="slide-caption trigger-item-link-secondary">
+                                                        <div class="slide-title"><span><em>Urban</em> Edge</span></div>
+                                                        <div class="slide-date"><span>2023</span></div>
+                                                        <div class="slide-cat"><span>Photography</span></div>                                                    
+                                                        <div class="slide-icon"><i class="arrow-icon-down"></i></div>                                             
+                                                    </div>
+                                                </div>
+                                            </div>                                                
+                                                                                    
+                                        </div>
+                                        <!-- ClaPat Portfolio -->
+                                        
+                                    </div>                                                           
+                                </div>    
+                                <!-- Showcase Portfolio Holder -->                                
+                                                                
+                                <hr><hr>                                
+                                
+                                <h4 class="text-align-center no-margins fadeout-element"><em class="has-mask-fill">Immerse yourself in our</em><br><span class="has-mask-fill">world of stunning designs</span></h4>
+                                <br>                               
+                                <div class="button-box text-align-center has-animation fadeout-element">             
+                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
+                                        <div class="clapat-button parallax-element">
+                                            <div class="button-border outline rounded parallax-element-second">
+                                                <a class="ajax-link" href="index-showcase-carousel.html" data-type="page-transition">
+                                                    <span data-hover="View All Works">View All Works</span>
+                                                 </a>
+                                             </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            
+                            <!-- Row -->
+                            <div class="content-row full has-clip-path row_padding_top row_padding_bottom row_padding_left row_padding_right light-section fadeout-element change-header-color" data-bgcolor="#f9f9f9">
+                            
+                                <div class="list-rotator-wrapper">                                
+                                	<div class="list-rotator-title has-mask-fill">[ Our Services ]</div>                                
+                                    <div class="list-rotator-height">                                    
+                                        <div class="list-rotator-pin">                                    
+                                            <ul class="list-rotator">
+                                                <li><em>Web</em> Design</li>
+                                                <li><em>Mobile</em> App Development</li>
+                                                <li><em>E-Commerce</em> Solutions</li>
+                                                <li><em>Digital</em> Marketing</li>
+                                                <li><em>UI/UX</em> Design</li>
+                                                <li><em>Brand</em> Strategy</li>
+                                                <li><em>SEO</em> Optimization</li>
+                                                <li><em>Social</em> Media Management</li>
+                                                <li><em>Content</em> Creation</li>
+                                                <li><em>Data</em> Analytics</li>
+                                            </ul>                                        
+                                        </div>                                        
+                                    </div>                                
+                                </div>
+                                
+                                <div class="one_fourth">
+                                	<p class="has-mask-fill no-margins">2023</p>
+                                </div>
+                                
+                                <div class="one_fourth">
+                                	<p class="has-mask-fill no-margins">Portfolio Website</p>
+                                </div>
+                                
+                                <div class="one_half last">
+                                	<h4><span class="has-span-indent">Short Quick Tip</span> <span class="has-mask-fill">Our project pages are a playground for creativity where we leverage an assortment of shortcodes to build captivating content.</span></h4>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
+                            <!-- Row -->
+                            <div class="content-row full row_padding_top row_padding_left row_padding_right dark-section" data-bgcolor="#0c0c0c">
+                                
+                                <div class="marquee-text-wrapper">
+                                    <h2 class="marquee-text fw big-title"><em>The Buzz Feed.</em> Stay Informed. <em>The Buzz Feed.</em> Stay Informed.</h2>
+                                </div>
+                                
+                                <div class="news-shortcode">
+                                
+                                    <div class="news-post in-view">
+                                    	<div class="post-head">
+                                            <div class="post-entry-meta">
+                                                <p>13 June 2023</p>
+                                            </div>
+                                            <div class="post-entry-meta">
+                                                <p>UX and UI, Design, JavaScript</p>
+                                            </div>
+                                            <div class="post-article">
+                                                <h4><em>The Art</em> of Web Animation</h4>
+                                                
+                                                <div class="post-content">
+                                                    <p>Explore the creative and technical aspects of web animation, and discover how it can enhance user engagement and bring your website to life...</p>
+                                                </div>
+                                                
+                                                <div class="button-wrap right button-link">
+                                                    <div class="icon-wrap parallax-wrap">
+                                                        <div class="button-icon parallax-element">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <a target="_blank" href="https://medium.com/"><div class="button-text sticky right">
+                                                        <span data-hover="Read Article">Read Article</span></div>
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="news-post">
+                                    	<div class="post-head">
+                                            <div class="post-entry-meta">
+                                                <p>13 June 2023</p>
+                                            </div>
+                                            <div class="post-entry-meta">
+                                                <p>Marketing, UX and UI, Design</p>
+                                            </div>
+                                            <div class="post-article">
+                                                <h4><em>SEO</em> Optimization Tips</h4>
+                                                
+                                                <div class="post-content">
+                                                    <p>Unlock the secrets of effective SEO optimization with practical tips and strategies to improve your website's visibility and organic search rankings...</p>
+                                                </div>
+                                                
+                                                <div class="button-wrap right button-link">
+                                                    <div class="icon-wrap parallax-wrap">
+                                                        <div class="button-icon parallax-element">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <a target="_blank" href="https://medium.com/"><div class="button-text sticky right">
+                                                        <span data-hover="Read Article">Read Article</span></div>
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="news-post">
+                                    	<div class="post-head">
+                                            <div class="post-entry-meta">
+                                                <p>13 June 2023</p>
+                                            </div>
+                                            <div class="post-entry-meta">
+                                                <p>UX and UI, Design, Inspiration</p>
+                                            </div>
+                                            <div class="post-article">
+                                                <h4><em>Web Design</em> Trends 2023</h4>
+                                                
+                                                <div class="post-content">
+                                                    <p>Stay ahead of the curve with an overview of the latest web design trends shaping the digital landscape in 2023, and learn how to implement them in your projects...</p>
+                                                </div>
+                                                
+                                                <div class="button-wrap right button-link">
+                                                    <div class="icon-wrap parallax-wrap">
+                                                        <div class="button-icon parallax-element">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <a target="_blank" href="https://medium.com/"><div class="button-text sticky right">
+                                                        <span data-hover="Read Article">Read Article</span></div>
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="news-post">
+                                    	<div class="post-head">
+                                            <div class="post-entry-meta">
+                                                <p>13 June 2023</p>
+                                            </div>
+                                            <div class="post-entry-meta">
+                                                <p>UX and UI, Design, Web Development</p>
+                                            </div>
+                                            <div class="post-article">
+                                                <h4><em>Mastering</em> JavaScript Basics</h4>
+                                                
+                                                <div class="post-content">
+                                                    <p>Dive into the fundamentals of JavaScript and gain mastery over the core concepts, syntax, and techniques to build dynamic and interactive web experiences...</p>
+                                                </div>
+                                                
+                                                <div class="button-wrap right button-link">
+                                                    <div class="icon-wrap parallax-wrap">
+                                                        <div class="button-icon parallax-element">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <a target="_blank" href="https://medium.com/"><div class="button-text sticky right">
+                                                        <span data-hover="Read Article">Read Article</span></div>
+                                                    </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+                                    
+                            </div> 
+                            <!--/Row -->
+                            
+                            
+                            
+                            
+                        
+                        </div>
+                        <!--/Main Page Content -->
+                        
+                        
+                        <!-- Page Navigation --> 
+                        <div id="page-nav">
+                            <div class="page-nav-wrap">
+                                <div class="page-nav-caption content-full-width text-align-center">                                 
+                                    <div class="inner">
+                                        <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="ABOUT US" href="about.html">
+                                            <div class="next-hero-title primary-font-title caption-timeline"><span><em>Discover</em></span> <span>Our Studio</span></div>
+                                        </a>
+                                        <div class="next-hero-subtitle caption-timeline"><span>Exploring our World of Visual Design</span></div>
+                                    </div>               
+                                </div>
+                            </div>
+                        </div>      
+                        <!--/Page Navigation -->
+                        
+                                
+                    </div>
+                    <!--/Main Content --> 
+                
+                </div>
+                <!--/Main -->
+                
+                <!-- Footer -->
+                <footer class="hidden">        	
+                    <div id="footer-container">
+                        
+                        <div id="backtotop" class="button-wrap left">
+                            <div class="icon-wrap parallax-wrap">
+                                <div class="button-icon parallax-element">
+                                    <i class="fa-solid fa-angle-up"></i>
+                                </div>
+                            </div>
+                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                        </div>
+                        
+                        <div class="footer-middle">
+                            <div class="copyright">2023 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. All rights reserved.</div>
+                        </div>
+                        
+                        <div class="socials-wrap">            	
+                            <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                            <div class="socials-text">Follow Us</div>
+                            <ul class="socials">
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tw</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.behance.com/clapat" target="_blank">Be</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/clapat.ro" target="_blank">Fb</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/clapat.themes/">In</a></span></li>
+                            </ul>                
+                        </div>
+                        
+                    </div>
+                </footer>
+                <!--/Footer -->
+            
+        
+        	</div>
+            <!--/Content Scroll -->
+            
+            
+            <div id="app"></div>
+            
+            
+		</div>    
+        <!--/Page Content -->
+    
+		</div>
+	</main>
+    
+    
+    
+    
+    <div class="cd-cover-layer"></div>
+    <div id="magic-cursor">
+        <div id="ball">
+        	<div id="ball-drag-x"></div>
+            <div id="ball-drag-y"></div>
+        	<div id="ball-loader"></div>
+        </div>
+    </div>
+    <div id="clone-image">
+    	<div class="hero-translate"></div>
+    </div>
+    <div id="rotate-device"></div>
+    
+    
+		
+    
+
+
+
+    
+</body>
+
+</html>
