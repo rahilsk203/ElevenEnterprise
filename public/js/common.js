@@ -1722,6 +1722,24 @@ Function First Load
 			setTimeout( function(){			
 				if ($('#menu-burger').hasClass("open")) {
 					
+					// Mobile menu positioning fix
+					if ($(window).width() <= 767) {
+						$('.fullscreen-menu nav').css({
+							'top': '0',
+							'height': '100vh',
+							'padding': '0'
+						});
+						$('.fullscreen-menu .nav-height').css({
+							'padding-top': '120px',
+							'padding-bottom': '60px',
+							'height': '100vh'
+						});
+						$('.fullscreen-menu .flexnav').css({
+							'padding-top': '30px',
+							'height': 'calc(100vh - 150px)'
+						});
+					}
+					
 					gsap.to('nav', {duration: 0.3, opacity:1, ease:Power2.easeInOut});
 					
 					$('header').addClass('over-sidebar').addClass('over-white-section');
